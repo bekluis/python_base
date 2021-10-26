@@ -9,3 +9,17 @@ s = set()               # 빈 집합을 생성
 s = set([1,2,3,1,1])
 print(s)
 
+s = { 1, 2, 3, 1, 2 }
+print(s)
+# print(s[0])
+
+s3 = { 3, 4, 5, 6}
+print(s & s3)
+print(s | s3)
+print(s - s3)
+
+# a = [ 1, 2, 3, 4]
+# b = [ 1, 9]
+# print( a & b)
+
+

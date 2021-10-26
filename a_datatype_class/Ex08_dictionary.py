@@ -12,7 +12,15 @@
 """
 
 print('--------- 1. 딕셔너리 요소 --------------- ')
-dt = {1:'one', 2:'two', '3':'three'}
+dt = {1:'one', 2:'two', '3':'three', 1: 'first', 3:'third'}
+print(dt)   # 인덱스 값 아님
+print(dt[1])
+print(dt[2])
+print(dt['3'])
+
+d2 = { 1 : 'one', 2 : 'two', (3,4) :'threefour'}
+print(d2)
+print(d2[(3,4)])
 
 
 
@@ -23,16 +31,49 @@ dt2 = {1:'one', 2:'two', (3,4):'turple'}
 
 print('--------- 2. 딕셔너리 추가 및 수정  --------------- ')
 # 딕셔너리에 값 추가 및 수정
+d2['korea'] = 'seoul'           # 추가
+print(d2)
+
+d2['korea'] = '대한민국'            # 수정
+print(d2)
+
 
 
 # 여러개 추가할 때
-
+d2.update({ 5: 'five', 6 : 'six'})
+print(d2)
 
 print('--------- 3. Key로 Value값 찾기  --------------- ')
-
-
-
-
+print(d2[5])
+print(d2.get(5))
 
 
 # Key와 Value만 따로 검색
+
+print(d2.keys())
+print(d2.values())
+print(d2.items())
+
+for item in d2.items():
+    print(item)
+
+
+
+for k, v in d2.items():         # unpacking 요소
+    print(k, '=', v)
+
+print('-'*10)
+
+for i in d2:            # for in 뒤에 있는 걸 하나씩 뽑아오는
+    print(i)
+
+
+'''
+자바스크립트
+
+for..in
+
+for..of
+
+
+'''
