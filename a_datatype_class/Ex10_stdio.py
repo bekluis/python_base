@@ -79,19 +79,55 @@
 # b = input('문자열입력 : ')
 # print('결과 :' , b[::-1])
 
-# b = input('문자열입력 : ')
-# print('결과 :' , b[::-1])
+
+# b = input('문자열을 입력하세요')
+# print('결과 : ' , b[::-1])
 
 
-import numpy
-abc = [10, 20, 30, 40, 50]
-abc = input('정수리스트 입력 : ').split()
-avg2 = numpy.mean(abc)
-print('평균 : ', avg2)
-var2 = numpy.var(abc)
-print('분산 :', var2)
-std2 = numpy.std(abc)
-print('표준편차 : ', std2)
+# import numpy
+# abc = [10, 20, 30, 40, 50]
+# abc = input('정수리스트 입력 : ').split()
+# avg2 = numpy.mean(abc)
+# print('평균 : ', avg2)
+# var2 = numpy.var(abc)
+# print('분산 :', var2)
+# std2 = numpy.std(abc)
+# print('표준편차 : ', std2)
 
-c
-phone =
+# import numpy
+# inArr = []
+# for i in range(5):
+#     # inArr.append(int(input('number')))
+#     print(numpy.std(inArr))
+
+totalScore = 0
+
+for i in range(5):
+    score = int(input("점수를 입력하세요 : "))
+    totalScore += score
+
+sum = totalScore/5
+print("평균 = %.1f" % (sum))
+
+
+# phone = [[],['A','B','C'],['D','E','F'],['G','H','I'],['J','K','L'],['M','N','O'],
+#          ['P','Q','R','S'],['T','U','V'],['W','X','Y','Z']]
+# string = input('문자열을 입력하시오')
+# result = ''
+# for char in string:
+#     for i in range(len(phone)):
+#         if char.upper() in phone[i]:
+#             result += str(i + 1)
+
+
+totalScore = 0
+
+for i in range(5):
+    score = int(input("점수를 입력하세요 :"))
+    totalScore += score
+
+sum = totalScore/5
+print("평균 = %.1f" % (sum))
+
+
+
