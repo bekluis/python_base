@@ -25,3 +25,7 @@ def get_weather():
 def get_date():
     today = ['월','화','수','목','금','토','일ㄴ']
     return choice(today)
+
+if __name__  == "__main__":
+    print('오늘은 :', get_date())
+    print('날씨는 :', get_weather())

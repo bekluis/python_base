@@ -1,9 +1,100 @@
 """
+    자바의 경우 클래스 선언
+    class Sample {
+        // 멤버변수
+        String data = "Hello";
+        String name;
+        // 생성자
+        Sample(String name){
+            this.name = name;
+        }
+    }
+"""
+
+
+
+"""
      1) 클래스 기초
 
      ` __init__ 함수 : 객체 초기화 함수( 생성자 역할 )
      ` self : 객체 자신을 가리킨다.
 """
+
+'''
+#파이썬 스타일
+class Sample:
+    data = "Hello"
+    def __init__(self, name):           #생성자 함수
+        self.name=name
+        print('__init__ 호출')
+
+    def __del__(self):
+        print('__del__ 호출')
+
+
+s = Sample("홍길동")
+print(s.name)
+print(s.data)
+del s
+print('종료')
+
+'''
+
+
+'''
+    자바인 경우
+    class Book {
+        String bname;                   # null
+        static int count;               # 0
+        Book(String bname){
+            this.bname = bname;
+            count++;
+        }   
+    }
+    
+    Book b1 = new Book("자바란무엇인가");
+    Book b2 = new Book("파이썬?");
+    print("책의 갯수: " + b1.count  );      //  ???     1
+    print("책의 갯수: " + b2.count  );      //  ???     1
+    
+'''
+"""
+    Book(String title){
+        this.title = title;
+    }
+"""
+
+class Book:
+    cnt = 0
+
+    def __init__(self, title):
+        self.title = title
+
+    # (1) 일반함수
+    def output(self):
+        print('책 제목: ', self.title)
+        self.cnt += 1
+        print('1. 총 갯수 :', self.cnt)
+
+    # (2) 클래스함수
+    @classmethod
+    def output2(cls):
+        cls.cnt += 1
+        print('2. 총 갯수: ', cls.cnt)
+
+
+b1 = Book('행복이란')
+b2 = Book('자바란')
+b1.output()
+b2.output()
+
+Book.output2()
+Book.output2()
+
+
+
+
+
 
 
 

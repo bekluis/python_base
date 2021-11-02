@@ -65,6 +65,24 @@
 #                                   0      1      2      3
 
 
+import sys
+args = sys.argv[1:]
+for i in args:
+    print(i)
+
+
+
+
+'''
+파일명 : Hello.java
+컴파일 : javac Hello.java ==> Hello.class
+실행   : java Hello 서버IP 아이디 비밀번호
+                    0      1     2
+'''
+
+
+
+
 # alist = []
 # sum = 0
 # for i in range(5):
@@ -128,6 +146,19 @@ for i in range(5):
 
 sum = totalScore/5
 print("평균 = %.1f" % (sum))
+
+
+
+
+
+
+'''
+10월 27일 수정
+a = [] # list
+b = () # tuple
+c = {} # dictionary
+
+'''
 
 
 

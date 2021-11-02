@@ -22,15 +22,26 @@ def print_menu():
 
 def set_contact():
     # 여기에 코드 작성
-    pass
+    name = input("Name : ")
+    phone_number = input("Phone number : ")
+    e_mail = input("E-mail : ")
+    address = input("Address : ")
+    contact = Contact(name, phone_number, e_mail, address)
+    return contact
+    #pass
 
 def print_contact(contact_list):
+    for contact in contact_list:
+        contact.print_info()
     # 여기에 코드 작성
-    pass
+    #pass
 
 def delete_contact(contact_list, name):
     # 여기에 코드 작성
-    pass
+    for i, contact in enumerate(contact_list):
+        if contact.name == name:
+            del contact_list[i]
+    # pass
 
 def run():
     # Contact 인스턴스를 저장할 리스트 자료구조 생성

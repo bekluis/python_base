@@ -34,3 +34,23 @@ else:
 
 
 
+hungry = True
+sleep = False
+
+print( type(hungry) )
+print( hungry )
+print( not hungry )
+print( hungry and sleep )
+print( hungry & sleep )
+print( hungry or sleep)
+
+# 실행결과
+'''
+<class 'bool'>
+True
+False
+False
+False
+True
+'''
+

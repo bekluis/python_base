@@ -1,3 +1,28 @@
+class Sample:
+
+
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def __str__(self):
+        return '이름 : {}\n 나이 : {}\n'.format(self.name, self.age)
+
+    def __add__(self, other):
+        self.age += other
+
+    def __gt__(self, other):
+        if self.age > other: return '성인'
+        else : return '미성인'
+
+s = Sample('홍길동', 33)
+print(s)
+s + 10
+print(s)
+
+print( s > 20 )
+
+
 """
     매직 메소드
 

@@ -9,10 +9,46 @@ def case2():
 def case3():
     print('case-3')
 
+# case1()
+f = { 'a1' : case1, 'a2' : case2, 'a3' : case3 }
+print(f['a1'])
+f['a1']()
 
 
 #---------------------------------------
 # 글로벌 변수와 지역변수
+
+# (1)
+# temp = '글로벌'
+#
+# def func():
+#     print('1>', temp )
+#
+# func()
+# print('2>', temp)
+
+# (2)
+# temp = '글로벌'
+#
+# def func():
+#     # print('0>', temp)            #
+#     temp = '지역'                 # 이 블록안에서만 사용 가능
+#     print('1>', temp )   # 지역
+#
+# func()
+# print('2>', temp)  # 글로벌
+
+
+# (3)
+temp = '글로벌'
+
+def func():
+    #global temp
+    temp = '지역'                 # 변수가 다른데 아래 변수를 쓰고 싶을때
+    print('1>', temp )     # 지역
+
+func()
+print('2>', temp)  # 글로벌
 
 
 
@@ -26,7 +62,13 @@ def case3():
     
     종종 사용됨
 '''
+def f(x, y):        # 일반 함수
+    return x+y
+print( f(3,2))
 
+
+f = lambda x, y : x+y       # 위랑 같은 코드
+print( f(3,2))
 
 
 #-----------------------------------------------------------
@@ -42,6 +84,28 @@ def case3():
     파이썬 2.x에서는 많이 사용하던 함수이지만, 최근 문법의 복잡성으로 권장하지 않는 추세란다.
 """
 
+# (1) map()
+def cal(x):
+    return x*2
+data = [1,2,3,4,5]              # 집합 list, set, tuple 가능
+
+result = list(map(cal, data))
+print(result)
+
+# (2) reduce()
+from functools import reduce            #이전 값과 맞물려 가는 통합 개념, 인자 2개    1x2, 2x3, 6x4...
+def cal(x, y):
+    return x*y
+data = [1,2,3,4,5]
+
+print(reduce(cal, data))
+
+
+number = ["1", 2, 3, float(4), str(5)]
+if number[4] == 5:
+    print(type(number[0]))
+elif number[3] == 4:
+    print(number[2:-1])
 
 
 

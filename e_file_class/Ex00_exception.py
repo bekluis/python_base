@@ -18,6 +18,21 @@
     [참고] 파이썬 내장 예외
         https://docs.python.org/3/library/exceptions.html
 """
+
+# 10/0
+try:                   #자바 try catch 와 유사
+     10/0             # 문제발생
+
+except Exception:           # 예외 발생 시 except
+    print("예외")
+else :                       # 예외 발생 안할 시 , 정상수행
+    print('예외없을 때')
+finally:
+    print('무조건실행')          # 예외 발생 시, 발생 안할 시 무조건 수행
+
+print('정상종료')
+
+
 """
 # 0으로 나누기
 #(1)

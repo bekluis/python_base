@@ -17,4 +17,32 @@
 
     - 파일을 열고 사용 후에는 반드시 닫아야 한다
 """
+try:
+ #   f = open('./data/data.txt','r',encoding='utf-8')                    # 상대경로
+ #   f = open('/python/aBasic_1/e_file_class/data/.data.txt', 'r', encoding='utf-8')                  # 절대경로
+
+
+    with open('./data/data.txt','r',encoding='utf-8') as f:         #close를 안해도 된다
+        # while True:
+        #     line = f.readline()
+        #     if not line: break
+        #     print(line, end='')                 #반복문을 벗어남
+
+        contents = f.read()
+        print(contents)                         #모든 내용
+        words = contents.split()
+        print(words)                            #쪼개기
+        num = len(words)
+
+except FileNotFoundError as e:
+    print('파일을 찾을 수 없음 - ',e)
+else:
+    print('파일명:',f.name,',총 단어수:', num)
+    # f.close()
+finally:
+    print('종료')
+
+
+
+
 

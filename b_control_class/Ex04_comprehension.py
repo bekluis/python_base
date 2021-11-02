@@ -15,7 +15,7 @@
 
 """
 
-
+'''
 # 컨프리핸션 사용하지 않은 리스트 생성
 alist = []
 alist.append(1)
@@ -33,20 +33,60 @@ print(alist)
 
 alist = list(range(1,7))
 print(alist)
-
+'''
 
 #------------------------------------------------
 # 리스트 컨프리핸션
+blist = [ n for n in range(1,7)]
+print(blist)
+
+blist = [ n*2 for n in range(1,7)]
+print(blist)
+
+blist = [ n*2 for n in range(1,7) if n%2==1 ]
+print(blist)
+
+# r : 1 ~ 3
+# c:  1 ~ 2
+# 컨프리핸션 축약형
+clist = [ (r,c) for r in range(1,4) for c in range(1,3)]
+print(clist)
+
+# 위의 코드를 2중 for문으로 풀어서 작성하기
+clist = []
+for r in range(1,4):
+    for c in range(1,3):
+            clist.append((r,c))         #list에 추가해라 append
+print(clist)
+
+
+
+
+
+
+
+# for문을 통해 1부터 6까지의 숫자를 n에 지정하고 if을 통해 홀수인지 경우에만 리스트요소로 담고 다시 * 2
 
 
 #-------------------------------------------
 # 딕셔러니 컨프리핸션
+datas = (2,3,4)
+adic = {  n : n**2  for n in datas }
+print(adic)
 
+word = 'LOVE LOL'               # L이라는 문자의 개수 , O라는 문자의 개수, V라는 문자의 개수
+wcnt = { letter:word.count(letter) for letter in word}
+print(wcnt)
 
+word = 'beckham soccer'
+woed = {letter:word.count(letter)for letter in word}
+print(woed)
 
 #------------------------------------------------
 # 셋 컨프리핸션
-
+blist = [ n*2 for n in range(1,7)]
+blist = { n*2 for n in range(1,7)}
+print(blist)
 
 
 
