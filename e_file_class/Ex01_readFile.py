@@ -18,15 +18,8 @@
     - 파일을 열고 사용 후에는 반드시 닫아야 한다
 """
 try:
- #   f = open('./data/data.txt','r',encoding='utf-8')                    # 상대경로
- #   f = open('/python/aBasic_1/e_file_class/data/.data.txt', 'r', encoding='utf-8')                  # 절대경로
-
 
     with open('./data/data.txt','r',encoding='utf-8') as f:         #close를 안해도 된다
-        # while True:
-        #     line = f.readline()
-        #     if not line: break
-        #     print(line, end='')                 #반복문을 벗어남
 
         contents = f.read()
         print(contents)                         #모든 내용
@@ -43,6 +36,11 @@ finally:
     print('종료')
 
 
+ #   f = open('./data/data.txt','r',encoding='utf-8')                    # 상대경로
+ #   f = open('/python/aBasic_1/e_file_class/data/.data.txt', 'r', encoding='utf-8')                  # 절대경로
 
 
-
+    # while True:
+        #     line = f.readline()
+        #     if not line: break
+        #     print(line, end='')                 #반복문을 벗어남

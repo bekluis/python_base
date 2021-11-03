@@ -1,9 +1,21 @@
 pin = '880122-1234567'
-birthday = 880122
-# gender =
+
+birthday = pin[:6]
+
+# if gender[7] in ['1','3'] :
+#     print("남자")
+# else :
+#     print("여자")
+
+gender = '남자' if pin.split('-')[1][0] == '1'else'여자'
+
+# if in[7] == '1':
+#     gender = '남자'
+# else :
+#     gender = '여자'
 
 print('홍길동님 생년월일 :{}'.format(birthday))
-# print('성별 :{}'.format(gender))
+print('성별 :{}'.format(gender))
 
 #
 # [출력결과]
@@ -41,7 +53,9 @@ a = (1,2,3)
 # a_list.append(4)
 # a = tuple(a_list)
 # print(a)
-a = a + (4,)        #튜플 추가 간단한 방법
+a = a + (4,)        #튜플 추가 간단한 방법 요소가 하나밖에 없는
+
+
 
 # [출력결과]
 # (1,2,3,4)
@@ -54,7 +68,7 @@ print(b)
 
 # 리스트는 값 수정이 가능하기 때문에 [1, 4, 3]
 
-# 6. while 문을 아래와 같이 출력되도록 작성한다.
+# 6. while 문을 아래와 같이 출력되도록 작성한다. (배운 모든 언어로 풀어보기 자바, 자바스크립트, 파이썬)
 # *
 # **
 # ***
@@ -78,6 +92,8 @@ math_score = [96, 99, 100, 55, 66]
 eng_score = [50,60,70,80,90]
 midterm_score = [kor_score, math_score, eng_score]
 
+
+
 def avg(a):
     sum = 0
     for i in midterm_score:                 # midterm_score 자료를 i에 하나씩 넣어준다
@@ -93,14 +109,7 @@ def grade(a):
 for i in range(0, 5):
     print("{}번쨰 학생 총점 :".format(i + 1), grade(i))
 
-def avg(a):
-    sum = 0
-    for i in midterm_score:
-        sum += i[a]
-    return sum // 3
-for i in range(0, 5):
-    print("{}번째 학생 총점 :".format(i + 1), avg(i))
-def grade(a);
+
 
 
 # 8. 이차원 딕셔너리 life를 만든다.
@@ -110,6 +119,17 @@ def grade(a);
 # 나머지 요소는 빈 딕셔너리를 참조한다 (20점)
 
 life = {'animal': {'cats':('Kim','Lee','Choi')},'octopi':(),'emus':{},'plants':{},'other':{}}
+
+life = {
+            'animal' :  {
+                        'cats' :  ('Kim','Lee','Choi')    ,
+                        'octopi':     {}  ,
+                        'emus' :      {}
+            }    ,
+            'plants' :   {}   ,
+            'other'  :    {}
+}
+
 
 
 # all_thing = {

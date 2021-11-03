@@ -69,8 +69,8 @@ for filename in filenames:
 #
 #         print("Not divided by 0")
 
-with open('i_have_a_dream.txt','r',encoding='utf-8') as f:
-
-    contents = f.read()
-    print(contents)
+# with open('i_have_a_dream.txt','r',encoding='utf-8') as f:
+#
+#     contents = f.read()
+#     print(contents)
     # f.close()             #close 쓰지 않을 경우
