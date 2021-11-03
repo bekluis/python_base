@@ -4,19 +4,19 @@ data = []
 try:
     with open('./dream.txt','r',encoding='utf-8') as f:
         while True:
-            if not f: break
-            con = f.readline()
+            con = f.readline()                      # 먼저 읽어주고
+            if not con : break                      # 그 다음 if문 돌리기
             data.append(con)
 
-        #print(contents)
+        # print(contents)
 
 
 
-except FileNotFoundError as e:
+except FileNotFoundError as e :
     print('파일을 찾을 수 없음 - ', e)
 else :
     for idx,i in enumerate(data):
-        print(str(idx) + '---' + data)
+        print(str(idx) + '---' + i)
 
 finally:
     print('')
